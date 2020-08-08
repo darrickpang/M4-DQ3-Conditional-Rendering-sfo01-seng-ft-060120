@@ -4,6 +4,9 @@ import { Profile, Photos, Cocktails, Pokemon} from '../components/Pages.js'
 
 class MainBox extends React.Component {
 
+  test = (e) => {
+    console.log(e.target)
+  }
 
   render() {
 
@@ -13,16 +16,16 @@ class MainBox extends React.Component {
 
     */
 
-    const detailsToDisplay = <div>Hi, I'm a div!</div>
+    const detailsToDisplay = <div>{Profile()}</div>
 
     return (
+ 
       <div>
-        <MenuBar />
+        <MenuBar test={this.test}/>
         {detailsToDisplay}
       </div>
     )
   }
-
 }
 
 export default MainBox
